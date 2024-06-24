@@ -1,5 +1,7 @@
 package com.haejun.springpractice.exec1.member;
 
+import com.haejun.springpractice.exec1.member.dto.Member;
+
 /**
  * packageName    : com.haejun.springpractice.exec1.member
  * fileName       : MemberRepository

@@ -1,4 +1,6 @@
-package com.haejun.springpractice.exec1.member;
+package com.haejun.springpractice.exec1.member.service;
+
+import com.haejun.springpractice.exec1.member.dto.Member;
 
 /**
  * packageName    : com.haejun.springpractice.exec1.member
