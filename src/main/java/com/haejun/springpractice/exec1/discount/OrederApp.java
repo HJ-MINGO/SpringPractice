@@ -1,5 +1,6 @@
 package com.haejun.springpractice.exec1.discount;
 
+import com.haejun.springpractice.config.AppConfig;
 import com.haejun.springpractice.exec1.discount.dto.Order;
 import com.haejun.springpractice.exec1.discount.service.OrderService;
 import com.haejun.springpractice.exec1.discount.service.impl.OrderServiceImpl;
@@ -23,8 +24,14 @@ import com.haejun.springpractice.exec1.member.service.impl.MemberServiceImpl;
 public class OrederApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+
+//        MemberService memberService = new MemberServiceImpl();
+//        OrderService orderService = new OrderServiceImpl();
+
+        // 이제 Appconfig사용
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
