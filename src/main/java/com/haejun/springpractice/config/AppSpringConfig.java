@@ -8,50 +8,40 @@ import com.haejun.springpractice.exec1.member.MemberRepository;
 import com.haejun.springpractice.exec1.member.MemoryMemberRepository;
 import com.haejun.springpractice.exec1.member.service.MemberService;
 import com.haejun.springpractice.exec1.member.service.impl.MemberServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * packageName    : com.haejun.springpractice.config
- * fileName       : AppConfig
+ * fileName       : AppSpringConfig
  * author         : NAHAEJUN
- * date           : 2024-06-27
+ * date           : 2024-06-30
  * description    :
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
- * 2024-06-27        NAHAEJUN              최초생성
+ * 2024-06-30        NAHAEJUN              최초생성
  */
-public class AppConfig {
-    
-    /**
-     * AppConfig는 애플리케이션의 실제 동작에 필요한 구현 객체를 생성
-     * 
-     * */
-    
-//    public MemberService memberService(){
-//        return new MemberServiceImpl(new MemoryMemberRepository());
-//    }
-//
-//    public OrderService orderService(){
-//        return new OrderServiceImpl(new FixDiscountPlicy(),new MemoryMemberRepository());
-//    }
-
+@Configuration
+public class AppSpringConfig {
     /**
      * 리팩토링 모든 역할 다 한눈에 보여야 한다. 그리고 중복되는 코드가 존재한다.
      * MemoryMemberRepository()
      *
      * */
-
+    @Bean
     public MemberService memberService(){
         return new MemberServiceImpl(getMemberRepository());
     }
-
+    @Bean
     public OrderService orderService(){
         return new OrderServiceImpl(discountPolicy(),getMemberRepository());
     }
+    @Bean
     public MemberRepository getMemberRepository() {
         return new MemoryMemberRepository();
     }
-
+    @Bean
     public DiscountPolicy discountPolicy() {
         return new FixDiscountPlicy();
     }
