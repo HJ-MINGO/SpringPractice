@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="memberService" class="com.haejun.springpractice.exec1.member.service.impl.MemberServiceImpl">
+        <constructor-arg name = "memberRepository" ref="memberRepository"/>
+    </bean>
+    <!-- 생성자 매개변수 순서 중요함.. 똑같이 맞춰야함 [시그니처를 맞춰줘야함] -->
+    <bean id="orderService" class="com.haejun.springpractice.exec1.discount.service.impl.OrderServiceImpl">
+        <constructor-arg name="discountPolicy" ref="discountPolicy"/>
+        <constructor-arg name="memberRepository" ref="memberRepository"/>
+    </bean>
+
+    <bean id="memberRepository" class="com.haejun.springpractice.exec1.member.MemoryMemberRepository"/>
+    <bean id="discountPolicy" class="com.haejun.springpractice.exec1.discount.service.impl.RateDiscountPolicy"/>
+</beans>
