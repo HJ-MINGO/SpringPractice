@@ -22,8 +22,7 @@ import org.springframework.context.annotation.Configuration;
  * -----------------------------------------------------------
  * 2024-06-30        NAHAEJUN              최초생성
  */
-@Configuration
-public class AppSpringConfig {
+public class NoAppSpringConfig {
     /**
      * 리팩토링 모든 역할 다 한눈에 보여야 한다. 그리고 중복되는 코드가 존재한다.
      * MemoryMemberRepository()
