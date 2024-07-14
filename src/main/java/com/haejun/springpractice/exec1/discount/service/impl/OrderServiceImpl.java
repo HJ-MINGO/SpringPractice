@@ -20,7 +20,7 @@ import com.haejun.springpractice.exec1.member.dto.Member;
  */
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+//    private final MemberRepository memberRepository = new MemoryMemberRepository();
 //    // 1번째 고객 요구사항 고정된 할인금액
 //    // private final DiscountPolicy discountPolicy = new FixDiscountPlicy();
 //    // 2번째 고객의 변경사항 고정된 금액이 아닌 할인금액으로 바꿔달라 요청
@@ -61,7 +61,13 @@ public class OrderServiceImpl implements OrderService {
     // 하지만 에러발생... DiscountPolicy 인터페이스를 구현한 구현체들이 존재하지만...
     // 어떤 구현체인지 알방도가 없으니 NULL 예외 발생... 그래서 어떤구현체가 들어가야하는지... 직접 의존성을 누군가가 주입해줘야하는데
     // 그것이바로 DI - 디텐던시 인젝션 (의존성 주입)
-    private DiscountPolicy discountPolicy;
+    private final DiscountPolicy discountPolicy;
+    private final MemberRepository memberRepository;
+
+    public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {
+        this.discountPolicy = discountPolicy;
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
@@ -70,5 +76,9 @@ public class OrderServiceImpl implements OrderService {
 
 
         return new Order(memberId,itemName,itemPrice,discountPrice);
+    }
+
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
     }
 }

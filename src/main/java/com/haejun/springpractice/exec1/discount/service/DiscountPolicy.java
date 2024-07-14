@@ -1,6 +1,7 @@
 package com.haejun.springpractice.exec1.discount.service;
 
 import com.haejun.springpractice.exec1.member.dto.Member;
+import org.springframework.stereotype.Component;
 
 /**
  * packageName    : com.haejun.springpractice.exec1.discount.service

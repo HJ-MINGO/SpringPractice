@@ -1,7 +1,7 @@
-package com.haejun.springpractice.exec1.discount.service;
+package com.haejun.springpractice.exec5.service;
 
-import com.haejun.springpractice.exec1.discount.dto.Order;
-import org.springframework.stereotype.Component;
+
+import com.haejun.springpractice.exec5.dto.Order;
 
 /**
  * packageName    : com.haejun.springpractice.exec1.discount.service
@@ -15,5 +15,5 @@ import org.springframework.stereotype.Component;
  * 2024-06-22        NAHAEJUN              최초생성
  */
 public interface OrderService {
-    Order createOrder(Long memberId, String name,int itemPrice);
+    Order createOrder(Long memberId, String name, int itemPrice);
 }
