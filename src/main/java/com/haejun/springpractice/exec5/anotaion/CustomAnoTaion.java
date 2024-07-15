@@ -21,7 +21,7 @@ import java.lang.annotation.*;
 @Inherited
 @Documented
 @Qualifier("customName")
-public class CustomAnoTaion {
+public @interface CustomAnoTaion {
  /**
   *
   * 이런식으로 @Qualifier 자체를  커스텀 어노테이션 자체로 등록해놓으면
