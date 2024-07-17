@@ -57,7 +57,7 @@ class NetWorkConnectionTest {
             return netWorkConnection;
         }
 
-        @Bean(destroyMethod = )
+//        @Bean(destroyMethod = )
         public NetWorkConnection2 getNetWorkConnection2() {
             NetWorkConnection2 nc = new NetWorkConnection2();
             nc.setUrl("https://www.naver.ocm");
