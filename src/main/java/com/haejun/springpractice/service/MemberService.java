@@ -17,10 +17,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberService {
 
-    @Autowired
-    private BeanMember beanMember;
-    // 순환참조 테스트
-    public void getMemberService(){
-        beanMember.testMethod();
-    }
+//    @Autowired
+//    private BeanMember beanMember;
+//    // 순환참조 테스트
+//    public void getMemberService(){
+//        beanMember.testMethod();
+//    }
 }

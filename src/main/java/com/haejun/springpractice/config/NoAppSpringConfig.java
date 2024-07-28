@@ -28,23 +28,23 @@ public class NoAppSpringConfig {
      * MemoryMemberRepository()
      *
      * */
-    @Bean
-    public MemberService memberService(){
-        System.out.println("MemberServiceImpl ~ ");
-        return new MemberServiceImpl(getMemberRepository());
-    }
-    @Bean
-    public OrderService orderService(){
-        System.out.println("orderService ~ ");
-        return new OrderServiceImpl(discountPolicy(),getMemberRepository());
-    }
-    @Bean
-    public MemberRepository getMemberRepository() {
-        System.out.println("MemoryMemberRepository ~ ");
-        return new MemoryMemberRepository();
-    }
-    @Bean
-    public DiscountPolicy discountPolicy() {
-        return new FixDiscountPlicy();
-    }
+//    @Bean
+//    public MemberService memberService(){
+//        System.out.println("MemberServiceImpl ~ ");
+//        return new MemberServiceImpl(getMemberRepository());
+//    }
+//    @Bean
+//    public OrderService orderService(){
+//        System.out.println("orderService ~ ");
+//        return new OrderServiceImpl(discountPolicy(),getMemberRepository());
+//    }
+//    @Bean
+//    public MemberRepository getMemberRepository() {
+//        System.out.println("MemoryMemberRepository ~ ");
+//        return new MemoryMemberRepository();
+//    }
+//    @Bean
+//    public DiscountPolicy discountPolicy() {
+//        return new FixDiscountPlicy();
+//    }
 }

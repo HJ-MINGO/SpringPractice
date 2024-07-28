@@ -17,14 +17,14 @@ import org.springframework.stereotype.Service;
  */
 public class BeanMember {
 
-    @Autowired
-    private MemberService memberService;
-    // 순환참조 메서드 테스트
-    public void testMethod(){
-        memberService.getMemberService();
-    }
-    // 바꿔치기 가능...
-    public void setDI( MemberServiceChild  memberServiceChild ) {
-        this.memberService = memberServiceChild;
-    }
+//    @Autowired
+//    private MemberService memberService;
+//    // 순환참조 메서드 테스트
+//    public void testMethod(){
+//        memberService.getMemberService();
+//    }
+//    // 바꿔치기 가능...
+//    public void setDI( MemberServiceChild  memberServiceChild ) {
+//        this.memberService = memberServiceChild;
+//    }
 }

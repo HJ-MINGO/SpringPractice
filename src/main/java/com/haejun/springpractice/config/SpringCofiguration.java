@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * -----------------------------------------------------------
  * 2024-06-16        NAHAEJUN              최초생성
  */
-@Configuration
+//@Configuration
 public class SpringCofiguration {
     /**
      * 관심사의 분리
@@ -34,13 +34,13 @@ public class SpringCofiguration {
      *  "연결" 하는 책임을 가지는 별도의 설정 클래스를 만들어야 한다.
      *  그것이 SpringCofiguration 클래스
      * */
-    @Bean
-    public BeanMember beanMember() {
-        return new BeanMember();
-    }
-
-    @Bean
-    public TimeTraceAop timeTraceAop() {
-        return new TimeTraceAop();
-    }
+//    @Bean
+//    public BeanMember beanMember() {
+//        return new BeanMember();
+//    }
+//
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 }

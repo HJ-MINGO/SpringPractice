@@ -22,30 +22,30 @@ import org.springframework.context.annotation.Configuration;
  * -----------------------------------------------------------
  * 2024-06-30        NAHAEJUN              최초생성
  */
-@Configuration
+//@Configuration
 public class AppSpringConfig {
     /**
      * 리팩토링 모든 역할 다 한눈에 보여야 한다. 그리고 중복되는 코드가 존재한다.
      * MemoryMemberRepository()
      *
      * */
-    @Bean
-    public MemberService memberService(){
-        System.out.println("MemberServiceImpl ~ ");
-        return new MemberServiceImpl(getMemberRepository());
-    }
-    @Bean
-    public OrderService orderService(){
-        System.out.println("orderService ~ ");
-        return new OrderServiceImpl(discountPolicy(),getMemberRepository());
-    }
-    @Bean
-    public MemberRepository getMemberRepository() {
-        System.out.println("MemoryMemberRepository ~ ");
-        return new MemoryMemberRepository();
-    }
-    @Bean
-    public DiscountPolicy discountPolicy() {
-        return new FixDiscountPlicy();
-    }
+//    @Bean
+//    public MemberService memberService(){
+//        System.out.println("MemberServiceImpl ~ ");
+//        return new MemberServiceImpl(getMemberRepository());
+//    }
+//    @Bean
+//    public OrderService orderService(){
+//        System.out.println("orderService ~ ");
+//        return new OrderServiceImpl(discountPolicy(),getMemberRepository());
+//    }
+//    @Bean
+//    public MemberRepository getMemberRepository() {
+//        System.out.println("MemoryMemberRepository ~ ");
+//        return new MemoryMemberRepository();
+//    }
+//    @Bean
+//    public DiscountPolicy discountPolicy() {
+//        return new FixDiscountPlicy();
+//    }
 }
