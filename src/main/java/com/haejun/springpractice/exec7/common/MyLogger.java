@@ -36,6 +36,8 @@ public class MyLogger {
 
     @PostConstruct
     public void init() {
+        // 그러면 이제 2번째로  @PostConstruct 어노테이션의 의해 init메서드가 실행되고
+        // uuid가 만들어진다.
         uuid = UUID.randomUUID().toString();
         System.out.println("[ " + uuid + " ] request scope bean create: " + this);
     }
